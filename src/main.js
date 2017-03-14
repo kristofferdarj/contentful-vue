@@ -5,22 +5,19 @@ import VueRouter from 'vue-router';
 import VueResource from 'vue-resource';
 
 import App from './App';
-import Hello from './components/Hello';
+import Blogroll from './components/Blogroll';
 
 Vue.use(VueResource);
 Vue.use(VueRouter);
 
-const Foo = { template: '<div>foo</div>' };
-const Bar = { template: '<div>bar</div>' };
-
 const routes = [
-  { path: '/foo', component: Foo },
-  { path: '/bar', component: Bar },
-  { path: '/hello', component: Hello },
+  { path: '/blogroll', component: Blogroll },
+  { path: '*', redirect: '/blogroll' }, //All invalid routes will redirect here
 ];
 
 const router = new VueRouter({
   routes,
+  mode: 'history',
 });
 
 Vue.config.debug = true;
@@ -28,5 +25,6 @@ Vue.config.debug = true;
 /* eslint-disable no-new, no-unused-vars */
 const app = new Vue({
   router,
-  components: { App },
-}).$mount('#app');
+  el: '#app',
+  render: h => h(App),
+});
