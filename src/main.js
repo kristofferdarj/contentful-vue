@@ -7,6 +7,8 @@ import VueResource from 'vue-resource';
 import App from './App';
 import Blogroll from './components/Blogroll';
 
+require('./assets/style/base.scss');
+
 Vue.use(VueResource);
 Vue.use(VueRouter);
 

@@ -6,8 +6,6 @@
 </template>
 
 <script>
-import CommonStyle from './assets/styles.css';
-
 export default {
   name: 'app',
 };
