@@ -1,19 +1,18 @@
-// The Vue build version to load with the `import` command
-// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import VueResource from 'vue-resource';
 
 import App from './App';
+import store from './store';
 import Blogroll from './components/Blogroll';
+import Test from './components/Test';
 
 require('./assets/style/base.scss');
 
-Vue.use(VueResource);
 Vue.use(VueRouter);
 
 const routes = [
   { path: '/blogroll', component: Blogroll },
+  { path: '/test', component: Test },
   { path: '*', redirect: '/blogroll' }, //All invalid routes will redirect here
 ];
 
@@ -27,6 +26,7 @@ Vue.config.debug = true;
 /* eslint-disable no-new, no-unused-vars */
 const app = new Vue({
   router,
+  store,
   el: '#app',
   render: h => h(App),
 });
