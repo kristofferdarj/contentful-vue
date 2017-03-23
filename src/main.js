@@ -1,5 +1,4 @@
-// The Vue build version to load with the `import` command
-// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
+
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import VueResource from 'vue-resource';
@@ -7,13 +6,21 @@ import VueResource from 'vue-resource';
 import App from './App';
 import Blogroll from './components/Blogroll';
 
+const contentful = require('contentful');
+// const util = require('util');
+
+const client = contentful.createClient({
+  space: 'xaubqpmk1tze',
+  accessToken: 'f35176cd0088d5868218ef8be4c8f312d6472dc7546a015f83dae5df672570e0',
+});
+
 require('./assets/style/base.scss');
 
 Vue.use(VueResource);
 Vue.use(VueRouter);
 
 const routes = [
-  { path: '/blogroll', component: Blogroll },
+  { path: '/blogroll', components: { blogroll: Blogroll } },
   { path: '*', redirect: '/blogroll' }, //All invalid routes will redirect here
 ];
 
@@ -28,5 +35,16 @@ Vue.config.debug = true;
 const app = new Vue({
   router,
   el: '#app',
+  data: {
+    entries: client.getEntries({
+      limit: 10,
+      order: 'sys.createdAt',
+    }),
+  },
+  methods: {
+    created() {
+      console.log('hej hopp min pop');
+    },
+  },
   render: h => h(App),
 });
