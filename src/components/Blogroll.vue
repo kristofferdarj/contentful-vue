@@ -1,8 +1,10 @@
 <template>
   <div class="entries">
     <p style="color: white">Blogroll</p>
-    <div v-for="item in shared.state.entries.items">
-      <p style="color: white;">Hej: {{ item.fields.title }}</p>
+    <div v-for="item in shared.state.entries.items" class="mdc-card">
+      <section class="mdc-card__primary">primary
+        <h1 class="mdc-card__title mdc-card__title--large">{{ item.fields.title }}</h1>
+      </section>
     </div>
   </div>
 </template>

@@ -1,4 +1,5 @@
 var path = require('path')
+var glob = require('glob')
 var config = require('../config')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
@@ -27,7 +28,10 @@ exports.cssLoaders = function (options) {
       loaders.push({
         loader: loader + '-loader',
         options: Object.assign({}, loaderOptions, {
-          sourceMap: options.sourceMap
+          sourceMap: options.sourceMap,
+          includePaths: glob.sync(
+                path.join(__dirname, '../node_modules/material-components-web')
+              ).map((dir) => path.dirname(dir)),
         })
       })
     }
