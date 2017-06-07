@@ -3,7 +3,11 @@
     <p style="color: white">Blogroll</p>
     <div v-for="item in shared.state.entries.items" class="mdc-card">
       <section class="mdc-card__primary">primary
-        <h1 class="mdc-card__title mdc-card__title--large">{{ item.fields.title }}</h1>
+        <h2 class="mdc-card__title mdc-card__title--large">{{ item.fields.title }}</h2>
+        <h3 class="mdc-card__subtitle">{{ formatDate(item.sys.createdAt) }}</h3>
+      </section>
+      <section class="mdc-card__supporting-text">
+        {{ item.fields.shortDescription }}
       </section>
     </div>
   </div>
@@ -11,6 +15,7 @@
 
 <script>
 import store from '../store';
+import dateMixin from '../mixins/dateMixin';
 
 export default {
   data() {
@@ -21,6 +26,7 @@ export default {
   created() {
     store.getPosts();
   },
+  mixins: [dateMixin],
 };
 </script>
 
