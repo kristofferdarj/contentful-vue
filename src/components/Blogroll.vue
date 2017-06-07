@@ -1,8 +1,10 @@
 <template>
   <div class="entries">
-    <p style="color: white">Blogroll</p>
     <div v-for="item in shared.state.entries.items" class="mdc-card">
-      <section class="mdc-card__primary">primary
+      <section class="mdc-card__media">
+        <img v-if="item.fields.featuredImage" :src="'https://'+item.fields.featuredImage.fields.file.url+'?fit=thumb&w=318&h=212'">
+      </section>
+      <section class="mdc-card__primary">
         <h2 class="mdc-card__title mdc-card__title--large">{{ item.fields.title }}</h2>
         <h3 class="mdc-card__subtitle">{{ formatDate(item.sys.createdAt) }}</h3>
       </section>

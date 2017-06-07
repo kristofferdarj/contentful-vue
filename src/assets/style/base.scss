@@ -1,1 +1,16 @@
 @import "node_modules/material-components-web/material-components-web.scss";
+
+.body {
+  background-color: #558B2F;
+}
+.entries {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.entries .mdc-card {
+  background-color: #FFF;
+  height: 350px;
+  margin: 0.5em;
+  width: 350px;
+}
