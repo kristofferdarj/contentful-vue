@@ -3,7 +3,7 @@ import moment from 'moment';
 
 export default {
   methods: {
-    formatDate: function formatDate(date) {
+    formatDate(date) {
       return moment(date).format('YYYY-MM-DD');
     },
   },

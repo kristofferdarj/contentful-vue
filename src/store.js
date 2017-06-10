@@ -10,18 +10,28 @@ const storage = {
   debug: false,
   state: {
     entries: {},
+    entry: {},
   },
-  getPosts: function getPosts() {
+  getPosts() {
     client.getEntries({
       limit: 10,
       order: 'sys.createdAt',
+      content_type: '2wKn6yEnZewu2SCCkus4as',
     }).then(function success(entries) {
       if (storage.debug) console.log('getPosts triggered');
       storage.state.entries = entries;
+    });
+  },
+  getPost(id) {
+    client.getEntry(id)
+    .then(function success(entry) {
+      if (storage.debug) console.log('getPost triggered');
+      storage.state.entry = entry;
     });
   },
 };
 export default {
   state: storage.state,
   getPosts() { storage.getPosts(); },
+  getPost(id) { storage.getPost(id); },
 };

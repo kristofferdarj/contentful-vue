@@ -1,16 +1,45 @@
+@import "reset.css";
 @import "node_modules/material-components-web/material-components-web.scss";
 
 .body {
   background-color: #558B2F;
+}
+.site-content {
+  display: flex;
+  justify-content: center;
+}
+.mdc-toolbar-fixed-adjust {
+  margin-top: 128px;
 }
 .entries {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-.entries .mdc-card {
+.mdc-card--entries {
   background-color: #FFF;
-  height: 350px;
   margin: 0.5em;
   width: 350px;
+}
+.entries .mdc-card__media {
+  margin-bottom: auto;
+}
+
+// Entry
+.mdc-card--entry {
+  background-color: #FFF;
+  padding: 16px;
+  max-width: 960px;
+}
+.entry_button {
+  @include mdc-ripple-base;
+  @include mdc-ripple-bg((pseudo: "::before"));
+  @include mdc-ripple-fg((pseudo: "::after"));
+  overflow: hidden;
+}
+.entry__dates {
+  color: #979797;
+}
+.entry__updated {
+  display: none;
 }

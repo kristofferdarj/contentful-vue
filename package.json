@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "contentful": "^3.8.1",
+    "marked": "^0.3.6",
     "material-components-web": "^0.11.1",
     "moment": "^2.18.1",
     "vue": "^2.2.2",
