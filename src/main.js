@@ -2,11 +2,10 @@
 
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import * as mdc from 'material-components-web';
 
 import App from './App';
-import Blogroll from './components/Blogroll';
-import BlogEntry from './components/BlogEntry';
+import Blogroll from './components/v-blogroll';
+import BlogEntry from './components/v-blog-entry';
 
 require('./assets/style/base.scss');
 const marked = require('marked');

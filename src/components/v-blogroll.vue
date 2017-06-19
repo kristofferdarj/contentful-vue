@@ -3,10 +3,13 @@
     <div class="entries">
       <v-blogroll-entry
         v-for="entry in shared.state.entries.items"
+        :key="entry.sys.id"
+        :id="entry.sys.id"
         :title="entry.fields.title"
-        :description="entry.fields.body"
+        :description="entry.fields.shortDescription"
         :createdAt="entry.sys.createdAt"
-        :updatedAt="entry.sys.updatedAt"></v-blogroll-entry>
+        :updatedAt="entry.sys.updatedAt"
+        :featuredImage="entry.fields.featuredImage ? entry.fields.featuredImage.fields.file.url : null"></v-blogroll-entry>
     </div>
   </div>
 </template>

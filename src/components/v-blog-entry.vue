@@ -5,12 +5,12 @@
         <article class="mdc-card mdc-card--entry">
           <header class="entry__header">
             <span class="entry__dates">
-            <time class="entry__published" datetime="">{{ formatDate(shared.state.entry.sys.createdAt) }}</time>
-              <time class="entry__updated" datetime="">{{ formatDate(shared.state.entry.sys.updatedAt) }}</time>
+              <time v-if="shared.entry && shared.entry.sys && shared.entry.sys.createdAt" class="entry__published" datetime="">{{ shared.entry.sys.createdAt }}</time>
+              <time v-if="shared.entry && shared.entry.sys && shared.entry.sys.updatedAt" class="entry__updated" datetime="">{{ shared.entry.sys.updatedAt }}</time>
             </span>
-            <h1 class="mdc-card__title mdc-card__title--large">{{ shared.state.entry.fields.title }}</h1>
+            <h1 v-if="shared.entry && shared.entry.fields && shared.entry.fields.title" class="mdc-card__title mdc-card__title--large">{{ shared.entry.fields.title }}</h1>
           </header>
-          <div class="entry-content" v-html="marked(shared.state.entry.fields.body)"></div>
+          <div v-if="shared.entry && shared.entry.fields && shared.entry.fields.body" class="entry-content" v-html="marked(shared.entry.fields.body)"></div>
           <div class="entry-author-box">
             Nåt om mig här.. nån component antar jag
           </div>
@@ -31,7 +31,7 @@ export default {
   name: 'Blogentry',
   data() {
     return {
-      shared: store,
+      shared: store.state,
     };
   },
   created() {
