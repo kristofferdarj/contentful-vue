@@ -13,7 +13,12 @@
 </template>
 
 <script>
+import * as mdc from 'material-components-web';
+
 export default {
   name: 'app',
+  mounted() {
+    mdc.toolbar.MDCToolbar.attachTo(document.querySelector('.mdc-toolbar'));
+  },
 };
 </script>

@@ -31,6 +31,16 @@ const router = new VueRouter({
   mode: 'history',
 });
 
+/*
+router.afterEach((to, from) => {
+  console.log('here again');
+  document.addEventListener('DOMContentLoaded', function domThing(event) {
+    console.log('loaded only once');
+    mdc.autoInit();
+  });
+});
+*/
+
 Vue.config.debug = true;
 
 /* eslint-disable no-new, no-unused-vars */
