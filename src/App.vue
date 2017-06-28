@@ -13,7 +13,9 @@
 </template>
 
 <script>
-import { MDCToolbar, MDCToolbarFoundation } from 'material-components-web/toolbar';
+import { toolbar as mdcToolbar } from 'material-components-web';
+
+const { MDCToolbar, MDCToolbarFoundation } = mdcToolbar;
 
 export default {
   name: 'app',

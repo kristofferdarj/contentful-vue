@@ -24,7 +24,7 @@ module.exports = {
   },
   // add your custom rules here
   'rules': {
-     "no-unused-variable": [0],
+    "no-unused-vars": ["error", {"varsIgnorePattern": "^MDC"}],
     // don't require .vue extension when importing
     'import/extensions': ['error', 'always', {
       'js': 'never',
