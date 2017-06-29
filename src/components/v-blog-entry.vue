@@ -4,18 +4,16 @@
       <main id="main" class="site-main" role="main">
         <article class="mdc-card mdc-card--entry">
           <header class="entry__header">
-            <span class="entry__dates">
-              <time v-if="shared.entry && shared.entry.sys && shared.entry.sys.createdAt" class="entry__published" datetime="">{{ shared.entry.sys.createdAt }}</time>
-              <time v-if="shared.entry && shared.entry.sys && shared.entry.sys.updatedAt" class="entry__updated" datetime="">{{ shared.entry.sys.updatedAt }}</time>
-            </span>
-            <h1 v-if="shared.entry && shared.entry.fields && shared.entry.fields.title" class="mdc-card__title mdc-card__title--large">{{ shared.entry.fields.title }}</h1>
+            <img class="entry__image" v-if="shared.entry && shared.entry.fields && shared.entry.fields.featuredImage" :src="'https:'+ shared.entry.fields.featuredImage.fields.file.url +'?fit=fill&w=700&h=300&fm=jpg&fl=progressive'">
+            <div class="entry__dates">
+              <time v-if="shared.entry && shared.entry.sys && shared.entry.sys.createdAt" class="entry__published" datetime="">Publicerat: {{ formatDate(shared.entry.sys.createdAt) }}</time>
+              <time v-if="shared.entry && shared.entry.sys && shared.entry.sys.updatedAt" class="entry__updated" datetime="">{{ formatDate(shared.entry.sys.updatedAt) }}</time>
+            </div>
+            <h1 v-if="shared.entry && shared.entry.fields && shared.entry.fields.title" class="mdc-typography--headline mdc-typography--adjust-margin">{{ shared.entry.fields.title }}</h1>
           </header>
           <div v-if="shared.entry && shared.entry.fields && shared.entry.fields.body" class="entry-content" v-html="marked(shared.entry.fields.body)"></div>
-          <div class="entry-author-box">
-            Nåt om mig här.. nån component antar jag
-          </div>
-          <footer class="entry-footer">
-            kategorilänkar
+          <footer class="entry__footer">
+            <v-entry-author></v-entry-author>
           </footer>
         </article>
       </main>
@@ -26,9 +24,13 @@
 <script>
 import store from '../store';
 import dateMixin from '../mixins/dateMixin';
+import vEntryAuthor from './v-entry-author';
 
 export default {
-  name: 'Blogentry',
+  name: 'vBlogEntry',
+  components: {
+    'v-entry-author': vEntryAuthor,
+  },
   data() {
     return {
       shared: store.state,

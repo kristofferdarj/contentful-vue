@@ -1,9 +1,9 @@
 <template>
   <div class="mdc-card mdc-card--entries">
     <section class="mdc-card__media">
-      <img v-if="featuredImage" :src="'https://'+ featuredImage +'?fit=thumb&w=318&h=212&fm=jpg&fl=progressive'">
+      <img v-if="featuredImage" :src="'https:'+ featuredImage +'?fit=thumb&w=318&h=212&fm=jpg&fl=progressive'">
     </section>
-    <section class="mdc-card__primary mdc-ripple-surface" data-mdc-auto-init="MDCRipple">
+    <section class="mdc-card__primary">
       <h2 class="mdc-card__title mdc-card__title--large">{{ title }}</h2>
       <h3 class="mdc-card__subtitle">{{ formatDate(createdAt) }}</h3>
     </section>

@@ -21,7 +21,7 @@ import dateMixin from '../mixins/dateMixin';
 import vBlogrollEntry from './v-blogroll-entry';
 
 export default {
-  name: 'Blogroll',
+  name: 'vBlogRoll',
   components: {
     'v-blogroll-entry': vBlogrollEntry,
   },

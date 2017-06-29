@@ -23,10 +23,12 @@ const storage = {
     });
   },
   getPost(id) {
-    client.getEntry(id)
-    .then(function success(entry) {
+    /* getEntries is used instead of getEntry to benefit from link resolution */
+    client.getEntries({
+      'sys.id': id,
+    }).then((entry) => {
       if (storage.debug) console.log('getPost triggered');
-      storage.state.entry = entry;
+      storage.state.entry = entry.items[0];
     });
   },
 };

@@ -1,8 +1,12 @@
 @import "reset.css";
+@import "colors.scss";
 @import "node_modules/material-components-web/material-components-web.scss";
 
+html {
+  font-size: 100%;
+}
 .body {
-  background-color: #EFEBE9;
+  background-color: $color-page-background;
 }
 .site-content {
   display: flex;
@@ -17,7 +21,7 @@
   justify-content: center;
 }
 .mdc-card--entries {
-  background-color: #FFF;
+  background-color: $color-card-background;
   margin: 0.5em;
   width: 350px;
 }
@@ -27,9 +31,23 @@
 
 // Entry
 .mdc-card--entry {
-  background-color: #FFF;
+  background-color: $color-card-background;
   padding: 16px;
-  max-width: 960px;
+  max-width: 700px;
+
+  h3 {
+    @include mdc-typography(subheading2);
+    @include mdc-typography-adjust-margin(subheading2);
+  }
+
+  p {
+    @include mdc-typography(body1);
+    @include mdc-typography-adjust-margin(body1);
+    max-width: 33em;
+  }
+  p + h3{
+    margin-top: 2rem;
+  }
 }
 .entry_button {
   @include mdc-ripple-base;
@@ -37,9 +55,16 @@
   @include mdc-ripple-fg((pseudo: "::after"));
   overflow: hidden;
 }
+.entry__image {
+  max-width: 100%;
+}
 .entry__dates {
   color: #979797;
+  margin: 0.2rem 0 1rem 0;
 }
 .entry__updated {
   display: none;
+}
+.entry__footer {
+  margin: 1.5rem 0 0 0 ;
 }
