@@ -38,11 +38,13 @@ html {
   h3 {
     @include mdc-typography(subheading2);
     @include mdc-typography-adjust-margin(subheading2);
+    color: $color-dark-text;
   }
 
   p {
     @include mdc-typography(body1);
     @include mdc-typography-adjust-margin(body1);
+    color: $color-dark-text;
     max-width: 33em;
   }
   p + h3{
@@ -55,11 +57,14 @@ html {
   @include mdc-ripple-fg((pseudo: "::after"));
   overflow: hidden;
 }
+.entry__title {
+  color: $color-dark-text;
+}
 .entry__image {
   max-width: 100%;
 }
 .entry__dates {
-  color: #979797;
+  color: $color-entry-dates;
   margin: 0.2rem 0 1rem 0;
 }
 .entry__updated {
@@ -67,4 +72,9 @@ html {
 }
 .entry__footer {
   margin: 1.5rem 0 0 0 ;
+}
+//Author info
+.author-info__list-item {
+  @include mdc-typography(body1);
+  margin-bottom: 0.5em;
 }

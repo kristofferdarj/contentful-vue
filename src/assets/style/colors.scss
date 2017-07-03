@@ -6,6 +6,7 @@
 $color-white: #FFF;
 $color-ebb: #EFEBE9;
 $color-dusty-grey: #979797;
+$color-black87: rgba(0, 0, 0, 0.87);
 
 /* Generic */
 $color-page-background: $color-ebb;
@@ -13,3 +14,6 @@ $color-page-background: $color-ebb;
 /* Cards */
 $color-card-background: $color-white;
 $color-entry-dates:     $color-white;
+
+/* Typography */
+$color-dark-text:       $color-black87;

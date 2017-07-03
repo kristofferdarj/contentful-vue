@@ -1,6 +1,9 @@
 <template>
   <div>
-    // Kristoffer Darj
+    <ul class="author-info__list">
+      <li class="author-info__list-item">Kristoffer Darj</li>
+      <li class="author-info__list-item"><a href="https://twitter.com/kristofferdarj">@kristofferdarj</a></li>
+    </ul>
   </div>
 </template>
 
@@ -9,8 +12,3 @@ export default {
   name: 'vEntryAuthor',
 };
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-/* Meep */
-</style>
