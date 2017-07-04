@@ -4,6 +4,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 
 import App from './App';
+import vHome from './components/v-home';
 import vBlogRoll from './components/v-blogroll';
 import vBlogEntry from './components/v-blog-entry';
 
@@ -21,9 +22,10 @@ Vue.mixin({
 });
 
 const routes = [
+  { path: '/', component: vHome },
   { path: '/blogroll', component: vBlogRoll },
   { path: '/entry/:id', component: vBlogEntry },
-  { path: '*', redirect: '/blogroll' }, //All invalid routes will redirect here
+  { path: '*', redirect: '/' }, //All invalid routes will redirect here
 ];
 
 const router = new VueRouter({
