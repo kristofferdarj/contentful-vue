@@ -2,7 +2,16 @@
   <div class="site-content home">
     <v-hero></v-hero>
     <div>
-      meep meep mep
+      reference customers
+    </div>
+    <div>
+      blog posts
+    </div>
+    <div>
+      cases
+    </div>
+    <div>
+      fun
     </div>
   </div>
 </template>
@@ -21,5 +30,6 @@ export default {
 .home {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 </style>
