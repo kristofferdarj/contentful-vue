@@ -1,5 +1,5 @@
 <template>
-  <div class="site-content">
+  <div class="site-content mdc-toolbar-fixed-adjust">
     <div class="entries">
       <v-blogroll-entry
         v-for="entry in shared.state.entries.items"

@@ -1,5 +1,10 @@
 <template>
-  <v-hero></v-hero>
+  <div class="site-content home">
+    <v-hero></v-hero>
+    <div>
+      meep meep mep
+    </div>
+  </div>
 </template>
 
 <script>
@@ -12,3 +17,9 @@ export default {
   },
 };
 </script>
+<style scoped>
+.home {
+  display: flex;
+  flex-direction: column;
+}
+</style>

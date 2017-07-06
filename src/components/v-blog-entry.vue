@@ -1,5 +1,5 @@
 <template>
-  <div class="content site-content">
+  <div class="content site-content mdc-toolbar-fixed-adjust">
     <div id="primary" class="content-area">
       <main id="main" class="site-main" role="main">
         <article class="mdc-card mdc-card--entry">

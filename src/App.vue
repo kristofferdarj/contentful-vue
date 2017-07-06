@@ -7,7 +7,7 @@
         </section>
       </div>
     </nav>
-    <router-view class="mdc-toolbar-fixed-adjust"></router-view>
+    <router-view></router-view>
   </div>
 </template>
 
