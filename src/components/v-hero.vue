@@ -8,7 +8,7 @@
         </video>
     </div>
     <div class="mdc-card hero_card mdc-elevation--z1">
-      <img class="" src="/static/avatar.jpg">
+      <img class="" src="https://www.gravatar.com/avatar/D2192205C9299A119584261269B3D06B?s=200">
       <section class="mdc-card__primary">
           <ul>
             <li>Kristoffer Darj</li>
@@ -34,15 +34,12 @@ export default {
   align-items: center;
 }
 .video-container {
-  display: flex;
-  justify-content: center;
-  width: 100vw;
+  height: 70vh;
+  min-height: 600px;
+  overflow: hidden;
 }
 .video-container__video {
-  height: 100%;
-  width: 177.77777778vh; /* 100 * 16 / 9 */
-  min-width: 100%;
-  min-height: 56.25vw; /* 100 * 9 / 16 */
+  object-fit: cover;
 }
 .hero_card {
   background-color: #FFF;
