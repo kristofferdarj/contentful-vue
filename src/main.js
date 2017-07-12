@@ -8,7 +8,8 @@ import vHome from './components/v-home';
 import vBlogRoll from './components/v-blogroll';
 import vBlogEntry from './components/v-blog-entry';
 
-require('./assets/style/base.scss');
+import baseStyle from './assets/style/base.scss';
+
 const marked = require('marked');
 
 Vue.use(VueRouter);

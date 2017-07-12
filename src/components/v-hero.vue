@@ -1,22 +1,14 @@
 <template>
   <div class="hero">
     <div class="video-container">
-        <video autoplay loop class="video-container__video" poster="/static/hero_background.jpg">
-            <source src="/static/hero_background.mp4" type="video/mp4">
-            <source src="/static/hero_background.webm" type="video/webm">
-            <source src="/static/hero_background.ogv" type="video/ogg">
-        </video>
+      <video autoplay loop muted class="video-container__video" poster="/static/hero_background.jpg">
+          <source src="/static/hero_background.mp4" type="video/mp4">
+          <source src="/static/hero_background.webm" type="video/webm">
+          <source src="/static/hero_background.ogv" type="video/ogg">
+      </video>
     </div>
-    <div class="mdc-card hero_card mdc-elevation--z1">
-      <img class="" src="https://www.gravatar.com/avatar/D2192205C9299A119584261269B3D06B?s=200">
-      <section class="mdc-card__primary">
-          <ul>
-            <li>Kristoffer Darj</li>
-            <li>@kristofferdarj</li>
-            <li>T: +46 (0)70 - 352 36 39</li>
-          </ul>
-        <h2 class="mdc-typography--display1"></h2>
-      </section>
+    <div class="hero_title-container">
+      <h1 class="hero_title">Hi, you found me! I'm a business and web developer from Sweden specialized in making awesome&nbsp;stuff.</h1>
     </div>
   </div>
 </template>
@@ -27,24 +19,44 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@import "node_modules/material-components-web/material-components-web.scss";
+@import '../assets/style/colors.scss';
+
 .hero {
-  display: flex;
-  flex-direction: column;
+  height: 100vh;
+  position: relative;
+  width: 100vw;
+}
+.hero_title-container {
   align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  left: 0;
+  margin: 32px;
+  position: absolute;
+  top: 0;
+  width: calc(100vw - 64px);
+  z-index: 1;
+}
+.hero_title {
+  @include mdc-typography(display2);
+  @include mdc-typography-adjust-margin(display2);
+
+  color: $color-light-text;
+  max-width: 15em;
+  word-wrap: break-word;
 }
 .video-container {
-  height: 70vh;
+  height: 100vh;
   min-height: 600px;
   overflow: hidden;
 }
 .video-container__video {
+  height: 100vh;
   object-fit: cover;
-}
-.hero_card {
-  background-color: #FFF;
-  margin-top: -50vh;
-  max-width: 700px;
-  z-index: 2;
+  width: 100vw;
+  object-position: 100% 50%;
 }
 </style>

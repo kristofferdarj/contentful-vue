@@ -5,15 +5,18 @@
 /* Define the colors */
 $color-white: #FFF;
 $color-ebb: #EFEBE9;
-$color-dusty-grey: #979797;
 $color-black87: rgba(0, 0, 0, 0.87);
 
 /* Generic */
 $color-page-background: $color-ebb;
 
+$color-toolbar-background: $color-black87;
+
 /* Cards */
 $color-card-background: $color-white;
 $color-entry-dates:     $color-white;
+$color-avatar-border:   $color-ebb;
 
 /* Typography */
+$color-light-text:      $color-white;
 $color-dark-text:       $color-black87;
