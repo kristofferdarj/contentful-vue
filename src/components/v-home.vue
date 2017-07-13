@@ -7,6 +7,7 @@
         <div>
           <h2 class="mdc-typography--display1">Kristoffer Darj</h2>
           <ul class="contact-list">
+            <li><a href="mailto:kristoffer.darj@gmail.com">kristoffer.darj@gmail.com</a></li>
             <li><a href="https://twitter.com/kristofferdarj">@kristofferdarj</a></li>
             <li><a href="tel:+46703523639">070 - 352 36 39</a></li>
             <li><a href="https://www.linkedin.com/in/kristofferdarj/">LinkedIn</a></li>
