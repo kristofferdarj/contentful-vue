@@ -6,6 +6,7 @@
 $color-white: #FFF;
 $color-ebb: #EFEBE9;
 $color-black87: rgba(0, 0, 0, 0.87);
+$color-black50: rgba(0, 0, 0, 0.5);
 
 /* Generic */
 $color-page-background: $color-ebb;
@@ -20,3 +21,4 @@ $color-avatar-border:   $color-ebb;
 /* Typography */
 $color-light-text:      $color-white;
 $color-dark-text:       $color-black87;
+$color-subtle-text:     $color-black50;
