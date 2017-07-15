@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="content-container">
     <nav class="mdc-toolbar mdc-toolbar--fixed mdc-toolbar--waterfall" data-mdc-auto-init="MDCIconToggle">
       <div class="mdc-toolbar__row">
         <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
@@ -8,16 +8,22 @@
       </div>
     </nav>
     <router-view></router-view>
+    <div class="filler"></div>
+    <v-footer></v-footer>
   </div>
 </template>
 
 <script>
 import { toolbar as mdcToolbar } from 'material-components-web';
+import vFooter from './components/v-footer';
 
 const { MDCToolbar, MDCToolbarFoundation } = mdcToolbar;
 
 export default {
   name: 'app',
+  components: {
+    'v-footer': vFooter,
+  },
   mounted() {
     MDCToolbar.attachTo(document.querySelector('.mdc-toolbar'));
   },
@@ -26,6 +32,15 @@ export default {
 <style lang="scss" scoped>
 @import './assets/style/colors.scss';
 
+.content-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.filler {
+  display: flex;
+  flex-grow: 1;
+}
 .mdc-toolbar {
   background-color: $color-toolbar-background;
   color: $color-light-text;

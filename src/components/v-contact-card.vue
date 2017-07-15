@@ -45,6 +45,8 @@ export default {
 }
 .contact-card__symbol {
   color: $color-subtle-text;
+  display: inline-flex;
+  justify-content: center;
   margin-right: 1rem;
   width: 16px;
 }
