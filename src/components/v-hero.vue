@@ -6,6 +6,7 @@
           <source src="/static/hero_background.webm" type="video/webm">
           <source src="/static/hero_background.ogv" type="video/ogg">
       </video>
+      <img class="video-container__poster" src="/static/hero_background.jpg">
     </div>
     <div class="hero_title-container">
       <h1 class="hero_title">Hi, you found me! I'm a business and web developer from Sweden specialized in making awesome&nbsp;stuff.</h1>
@@ -54,9 +55,25 @@ export default {
   overflow: hidden;
 }
 .video-container__video {
+  display: none;
   height: 100vh;
   object-fit: cover;
   width: 100vw;
   object-position: 100% 50%;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+}
+.video-container__poster {
+  display: block;
+  height: 100vh;
+  object-fit: cover;
+  width: 100vw;
+  object-position: 100% 50%;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
 </style>

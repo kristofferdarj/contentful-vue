@@ -1,6 +1,6 @@
 <template>
   <div class="footer">
-    Powered by kittens and brainpower. <router-link to="blogroll">blogroll</router-link>
+    Powered by kittens and brainpower.
   </div>
 </template>
 
