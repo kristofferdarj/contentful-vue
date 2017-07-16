@@ -1,6 +1,6 @@
 <template>
   <div class="footer">
-    Powered by kittens and brainpower
+    Powered by kittens and brainpower. <router-link to="blogroll">blogroll</router-link>
   </div>
 </template>
 
@@ -17,7 +17,7 @@ export default {
 .footer {
   align-items: center;
   background-color: $color-footer-background;
-  color: $color-dark-text;
+  color: $color-subtle-text;
   display: flex;
   height: 32px;
   justify-content: center;
