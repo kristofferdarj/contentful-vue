@@ -7,7 +7,7 @@
         <ul class="contact-list">
           <li><i class="contact-card__symbol fa fa-envelope-o" aria-hidden="true"></i><a class="contact-card__link" href="mailto:kristoffer.darj@gmail.com">kristoffer.darj@gmail.com</a></li>
           <li><i class="contact-card__symbol fa fa-twitter"></i><a class="contact-card__link" href="https://twitter.com/kristofferdarj">@kristofferdarj</a></li>
-          <li><i class="contact-card__symbol fa fa-mobile"></i><a class="contact-card__link" href="tel:+46703523639">070 - 352 36 39</a></li>
+          <li><i class="contact-card__symbol fa fa-mobile"></i><a class="contact-card__link" href="tel:+46703523639">+46 (0)70 - 352 36 39</a></li>
           <li><i class="contact-card__symbol fa fa-linkedin"></i><a class="contact-card__link" href="https://www.linkedin.com/in/kristofferdarj/">LinkedIn</a></li>
         </ul>
       </div>
