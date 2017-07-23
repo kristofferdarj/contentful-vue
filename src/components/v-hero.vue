@@ -46,7 +46,7 @@ export default {
   @include mdc-typography-adjust-margin(display2);
 
   color: $color-light-text;
-  max-width: 15em;
+  max-width: 700px;
   word-wrap: break-word;
 }
 .video-container {
