@@ -1,0 +1,33 @@
+
+.---------------------------------.
+|  .---------------------------.  |
+|[]|                           |[]|
+|  |                           |  |
+|  |  Best of:                 |  |
+|  |  Kristoffer Darj          |  |
+|  |                           |  |
+|  |                           |  |
+|  |                           |  |
+|  |                           |  |
+|  |                           |  |
+|  `---------------------------'  |
+|      __________________ _____   |
+|     |   ___            |     |  |
+|     |  |   |           |     |  |
+|     |  |   |           |     |  |
+|     |  |   |           |     |  |
+|     |  |___|           |     |  |
+\_____|__________________|_____|__|
+
+Hey!
+
+Nice that you found this.
+I had my doubts that anyone would read it actually.
+
+Any site should have some easter eggs hidden.
+Working at Klarna we hid a pong game behind a conami code
+and a recruitment site looking like the half-life GUI among other stuff.
+
+Well the secret password is: Ken sent me.
+
+//Kristoffer 
