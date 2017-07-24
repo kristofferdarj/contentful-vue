@@ -3,8 +3,8 @@
     <v-hero></v-hero>
     <v-contact-card></v-contact-card>
     <div class="teaser">
-      <p>I've worked in a number of companies, from startups to large coorporations. E-commerce, finance, media, ad agencies and consulting firms. I studied UX and have been doing anything from personas and user interviews to drawing UI:s in Sketch, as well as implementing them in front and backend.</p>
-      <p>I pore over reading about business development, agile, lean, company culture and sales. I'm currently employed as a product owner meaning I do a lot of UX, prioritising and working with product visions and roadmaps.</p>
+      <p>I'm a happy chap that loves everything about web and business development. I have worked at a number of places, ranging from startups to large coorporations and picked up some useful things about e-commerce, fintech, media, lean, ad agencies, consulting firms and it's customers along the&nbsp;way.</p>
+      <p>Have a look around and just ask if you need anything else.</p>
     </div>
   </div>
 </template>
