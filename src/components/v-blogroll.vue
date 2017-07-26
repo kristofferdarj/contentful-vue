@@ -1,12 +1,12 @@
 <template>
-  <div class="site-content mdc-toolbar-fixed-adjust">
-    <div class="entries">
+  <div class="mdc-card blogroll">
+    <div class="mdc-list mdc-list--avatar-list mdc-list--three-line">
       <v-blogroll-entry
         v-for="entry in shared.state.entries.items"
         :key="entry.sys.id"
         :id="entry.sys.id"
         :title="entry.fields.title"
-        :description="entry.fields.shortDescription"
+        :description="(entry.fields.shortDescription.length <= 80 ? entry.fields.shortDescription : entry.fields.shortDescription.substring(0,80)+'...')"
         :createdAt="entry.sys.createdAt"
         :updatedAt="entry.sys.updatedAt"
         :featuredImage="entry.fields.featuredImage ? entry.fields.featuredImage.fields.file.url : null"></v-blogroll-entry>
@@ -38,22 +38,17 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h1, h2 {
-  font-weight: normal;
-}
+<style lang="scss" scoped>
+@import '../assets/style/colors.scss';
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
+.blogroll {
+  background-color: $color-card-background;
+  margin: 16px 0;
+  max-width: 100%;
 
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
+  @media(min-width: 700px) {
+    margin: 16px;
+    width: 700px;
+  }
 }
 </style>

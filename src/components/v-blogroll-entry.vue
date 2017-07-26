@@ -1,22 +1,13 @@
 <template>
-  <div class="mdc-card mdc-card--entries">
-    <section class="mdc-card__media">
-      <img v-if="featuredImage" :src="'https:'+ featuredImage +'?fit=thumb&w=318&h=212&fm=jpg&fl=progressive'">
-    </section>
-    <section class="mdc-card__primary">
-      <h2 class="mdc-card__title mdc-card__title--large">{{ title }}</h2>
-      <h3 class="mdc-card__subtitle">{{ formatDate(createdAt) }}</h3>
-    </section>
-    <section class="mdc-card__supporting-text">
+  <router-link :to="'entry/' + id" class="mdc-list-item">
+    <img class="mdc-list-item__start-detail" v-if="featuredImage" :src="'https:'+ featuredImage +'?fit=thumb&w=40&h=40&fm=jpg&fl=progressive'">
+    <span class="mdc-list-item__text title-wrapper">
+      <span class="title-text">{{ title }}</span>
+      <span class="mdc-list-item__text__secondary title-text">
       {{ description }}
-    </section>
-    <section class="mdc-card__actions">
-      <router-link
-        class="mdc-button mdc-button--compact mdc-card__action mdc-ripple-surface entry_button"
-        :to="'entry/'+id"
-        data-mdc-auto-init="MDCRipple">Read more</router-link>
-    </section>
-  </div>
+      </span>
+    </span>
+  </router-link>
 </template>
 
 <script>
@@ -37,22 +28,17 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h1, h2 {
-  font-weight: normal;
+<style lang="scss" scoped>
+.title-wrapper {
+  overflow: hidden;
 }
-
-ul {
-  list-style-type: none;
-  padding: 0;
+.title-text {
+  box-sizing: border-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
+.mdc-list--three-line .mdc-list-item {
+  height: 90px;
 }
 </style>

@@ -5,6 +5,7 @@
     <div class="teaser">
       <p>I'm a happy chap that loves everything about web and business development. I have worked at a number of places, ranging from startups to large coorporations and picked up some useful things about e-commerce, fintech, media, lean, ad agencies, consulting firms and it's customers along the way. Have a look around and just ask if you need anything else.</p>
     </div>
+    <v-blogroll></v-blogroll>
   </div>
 </template>
 
