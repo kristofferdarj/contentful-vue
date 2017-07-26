@@ -15,19 +15,6 @@ html {
 .mdc-toolbar-fixed-adjust {
   margin-top: 128px;
 }
-.entries {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.mdc-card--entries {
-  background-color: $color-card-background;
-  margin: 0.5em;
-  width: 350px;
-}
-.entries .mdc-card__media {
-  margin-bottom: auto;
-}
 
 // Entry
 .mdc-card--entry {
