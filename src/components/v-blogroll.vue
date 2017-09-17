@@ -1,16 +1,16 @@
 <template>
   <div class="mdc-card blogroll">
-    <ul class="mdc-list mdc-list--avatar-list mdc-list--three-line">
+    <div class="mdc-list mdc-list--avatar-list mdc-list--three-line">
       <v-blogroll-entry
         v-for="entry in shared.state.entries.items"
         :key="entry.sys.id"
         :id="entry.sys.id"
-        :title="(entry.fields.title.length <= 32 ? entry.fields.title : entry.fields.title.substring(0,30)+'...')"
+        :title="entry.fields.title"
         :description="(entry.fields.shortDescription.length <= 80 ? entry.fields.shortDescription : entry.fields.shortDescription.substring(0,80)+'...')"
         :createdAt="entry.sys.createdAt"
         :updatedAt="entry.sys.updatedAt"
         :featuredImage="entry.fields.featuredImage ? entry.fields.featuredImage.fields.file.url : null"></v-blogroll-entry>
-    </ul>
+    </div>
   </div>
 </template>
 
@@ -43,5 +43,11 @@ export default {
 
 .blogroll {
   background-color: $color-card-background;
+  margin: 16px;
+  max-width: 100%;
+
+  @media(min-width: 700px) {
+    width: 700px;
+  }
 }
 </style>
