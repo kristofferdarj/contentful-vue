@@ -11,6 +11,7 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@material/animation": "^0.3.1",
     "contentful": "^3.8.1",
     "marked": "^0.3.6",
     "material-components-web": "^0.11.1",
