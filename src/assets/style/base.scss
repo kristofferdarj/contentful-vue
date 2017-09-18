@@ -38,12 +38,6 @@ html {
     margin-top: 2rem;
   }
 }
-.entry_button {
-  @include mdc-ripple-base;
-  @include mdc-ripple-bg((pseudo: "::before"));
-  @include mdc-ripple-fg((pseudo: "::after"));
-  overflow: hidden;
-}
 .entry__title {
   color: $color-dark-text;
 }
