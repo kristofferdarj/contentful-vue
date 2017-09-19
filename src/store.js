@@ -11,6 +11,8 @@ const storage = {
   state: {
     entries: {},
     entry: {},
+    highlights: {},
+    highlight: {},
   },
   getPosts() {
     client.getEntries({
@@ -29,6 +31,16 @@ const storage = {
     }).then((entry) => {
       if (storage.debug) console.log('getPost triggered');
       storage.state.entry = entry.items[0];
+    });
+  },
+  getHighlights() {
+    client.getEntries({
+      limit: 10,
+      order: 'sys.createdAt',
+      content_type: 'highlights',
+    }).then(function success(highlights) {
+      if (storage.debug) console.log('getHighlights triggered');
+      storage.state.highlights = highlights;
     });
   },
 };
