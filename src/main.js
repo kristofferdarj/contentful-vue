@@ -40,7 +40,6 @@ Vue.config.debug = true;
 const app = new Vue({
   components: { App },
   router,
-  el: '#app',
   render(h) {
     return h('app', {}, {});
   },
