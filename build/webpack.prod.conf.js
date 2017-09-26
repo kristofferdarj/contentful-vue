@@ -5,6 +5,7 @@ var config = require('../config')
 var merge = require('webpack-merge')
 var baseWebpackConfig = require('./webpack.base.conf')
 var CopyWebpackPlugin = require('copy-webpack-plugin')
+var PrerenderSpaPlugin = require('prerender-spa-plugin')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
@@ -87,7 +88,11 @@ var webpackConfig = merge(baseWebpackConfig, {
         to: config.build.assetsSubDirectory,
         ignore: ['.*']
       }
-    ])
+    ]),
+    new PrerenderSpaPlugin(
+      path.join(__dirname, 'dist'),
+      [ '/', '/entry/1asN98Ph3mUiCYIYiiqwko', '/entry/A96usFSlY4G0W4kwAqswk']
+    )
   ]
 })
 
