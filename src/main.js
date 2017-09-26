@@ -45,3 +45,7 @@ const app = new Vue({
     return h('app', {}, {});
   },
 });
+
+document.addEventListener('DOMContentLoaded', function render() {
+  app.$mount('#app');
+});
