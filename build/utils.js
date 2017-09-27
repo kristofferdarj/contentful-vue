@@ -29,9 +29,14 @@ exports.cssLoaders = function (options) {
         loader: loader + '-loader',
         options: Object.assign({}, loaderOptions, {
           sourceMap: options.sourceMap,
-          includePaths: glob.sync(
-                path.join(__dirname, '../node_modules/material-components-web')
-              ).map((dir) => path.dirname(dir)),
+          includePaths: [
+                    '../node_modules',
+                    '../node_modules/material-components-web',
+                    '../node_modules/material-components-web/node_modules',
+                    '../node_modules/@material/*']
+            .map((d) => path.join(__dirname, d))
+            .map((g) => glob.sync(g))
+            .reduce((a, c) => a.concat(c), [])
         })
       })
     }
