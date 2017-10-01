@@ -26,7 +26,7 @@ const routes = [
   { path: '/', component: vHome },
   { path: '/blogroll', component: vBlogRoll },
   { path: '/entry/:id', component: vBlogEntry },
-  { path: '*', redirect: '/' }, //All invalid routes will redirect here
+  { path: '*', redirect: '/' },
 ];
 
 const router = new VueRouter({

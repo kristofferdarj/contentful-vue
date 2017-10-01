@@ -1,3 +1,5 @@
+/* eslint-disable prefer-destructuring */
+
 const contentful = require('contentful');
 // const util = require('util');
 
@@ -29,6 +31,11 @@ const storage = {
     }).then((entry) => {
       if (storage.debug) console.log('getPost triggered');
       storage.state.entry = entry.items[0];
+
+      setTimeout(() => {
+        const prerenderEvent = new Event('prerender-ready');
+        document.dispatchEvent(prerenderEvent); // So that prerendering waits for this
+      }, 3000);
     });
   },
 };

@@ -91,9 +91,11 @@ var webpackConfig = merge(baseWebpackConfig, {
     ]),
     new PrerenderSpaPlugin(
       path.join(__dirname, '../dist'),
-      [ '/', '/blogroll','/entry/1asN98Ph3mUiCYIYiiqwko', '/entry/A96usFSlY4G0W4kwAqswk'],
+      [ '/entry/1asN98Ph3mUiCYIYiiqwko',
+        '/entry/A96usFSlY4G0W4kwAqswk'],
       {
-        ignoreJSErrors: true
+        ignoreJSErrors: false//,
+//        captureAfterDocumentEvent: 'prerender-ready'
       }
     )
   ]
