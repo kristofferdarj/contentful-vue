@@ -44,7 +44,17 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang="scss">
+@import '../assets/style/colors.scss';
+
+.entry-content p:nth-of-type(1n)::selection {
+  background-color: #80CBC4;
+}
+.entry-content p:nth-of-type(2n)::selection {
+  background-color: #C5E1A5;
+}
+</style>
+<style lang="scss" scoped>
 h1, h2 {
   font-weight: normal;
 }
