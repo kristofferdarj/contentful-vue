@@ -12,8 +12,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
-@import '../assets/style/colors.scss';
-
 .footer {
   align-items: center;
   background-color: $color-footer-background;

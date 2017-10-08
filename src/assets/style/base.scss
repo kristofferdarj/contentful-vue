@@ -1,6 +1,7 @@
 @import "reset.css";
-@import "colors.scss";
-@import "material-components-web/material-components-web.scss";
+@import "@material/card/mdc-card";
+@import "@material/list/mdc-list";
+@import "@material/typography/mixins";
 
 html {
   font-size: 100%;
@@ -16,44 +17,6 @@ html {
   margin-top: 128px;
 }
 
-// Entry
-.mdc-card--entry {
-  background-color: $color-card-background;
-  padding: 16px;
-  max-width: 700px;
-
-  h3 {
-    @include mdc-typography(subheading2);
-    @include mdc-typography-adjust-margin(subheading2);
-    color: $color-dark-text;
-  }
-
-  p {
-    @include mdc-typography(body1);
-    @include mdc-typography-adjust-margin(body1);
-    color: $color-dark-text;
-    max-width: 33em;
-  }
-  p + h3{
-    margin-top: 2rem;
-  }
-}
-.entry__title {
-  color: $color-dark-text;
-}
-.entry__image {
-  max-width: 100%;
-}
-.entry__dates {
-  color: $color-entry-dates;
-  margin: 0.2rem 0 1rem 0;
-}
-.entry__updated {
-  display: none;
-}
-.entry__footer {
-  margin: 1.5rem 0 0 0 ;
-}
 //Author info
 .author-info__list-item {
   @include mdc-typography(body1);

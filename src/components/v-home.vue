@@ -2,9 +2,10 @@
   <div class="site-content home">
     <v-hero></v-hero>
     <v-contact-card></v-contact-card>
-    <div class="teaser">
+    <section class="teaser">
       <p>I'm a happy chap that loves everything about web and business development. I have worked at a number of places, ranging from startups to large coorporations and picked up some useful things about e-commerce, fintech, media, lean, ad agencies, consulting firms and it's customers along the way. Have a look around and just ask if you need anything else.</p>
-    </div>
+    </section>
+    <v-highlights></v-highlights>
     <v-blogroll></v-blogroll>
   </div>
 </template>
@@ -12,6 +13,7 @@
 <script>
 import vHero from './v-hero';
 import vContactCard from './v-contact-card';
+import vHighlights from './v-highlights';
 import vBlogRoll from './v-blogroll';
 
 export default {
@@ -20,12 +22,12 @@ export default {
     'v-hero': vHero,
     'v-contact-card': vContactCard,
     'v-blogroll': vBlogRoll,
+    'v-highlights': vHighlights,
   },
 };
 </script>
 <style lang="scss" scoped>
-@import "node_modules/material-components-web/material-components-web.scss";
-@import '../assets/style/colors.scss';
+@import "@material/typography/mixins";
 
 .home {
   display: flex;

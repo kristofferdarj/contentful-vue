@@ -43,9 +43,47 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
-@import '../assets/style/colors.scss';
+@import "@material/typography/mixins";
+
+// Entry
+.mdc-card--entry {
+  background-color: $color-card-background;
+  padding: 16px;
+  max-width: 700px;
+
+  h3 {
+    @include mdc-typography(subheading2);
+    @include mdc-typography-adjust-margin(subheading2);
+    color: $color-dark-text;
+  }
+
+  p {
+    @include mdc-typography(body1);
+    @include mdc-typography-adjust-margin(body1);
+    color: $color-dark-text;
+    max-width: 33em;
+  }
+  p + h3{
+    margin-top: 2rem;
+  }
+}
+.entry__title {
+  color: $color-dark-text;
+}
+.entry__image {
+  max-width: 100%;
+}
+.entry__dates {
+  color: $color-entry-dates;
+  margin: 0.2rem 0 1rem 0;
+}
+.entry__updated {
+  display: none;
+}
+.entry__footer {
+  margin: 1.5rem 0 0 0 ;
+}
 
 .entry-content p:nth-of-type(1n)::selection {
   background-color: #80CBC4;

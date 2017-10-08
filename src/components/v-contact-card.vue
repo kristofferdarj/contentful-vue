@@ -20,8 +20,6 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-@import '../assets/style/colors.scss';
-
 @keyframes slideInFromBottom {
   0% {
     transform: translateY(0);
@@ -33,6 +31,7 @@ export default {
 .contact-card {
   animation: slideInFromBottom 1.5s ease-out 5s 1 normal forwards;
   background-color: $color-card-background;
+  margin-bottom: 1rem;
   margin-top: 16px;
   max-width: 700px;
   z-index: 2;

@@ -22,7 +22,6 @@ export default {
 
 <style lang="scss" scoped>
 @import "node_modules/material-components-web/material-components-web.scss";
-@import '../assets/style/colors.scss';
 
 .hero {
   height: 100vh;

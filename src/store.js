@@ -13,6 +13,8 @@ const storage = {
   state: {
     entries: {},
     entry: {},
+    highlights: {},
+    highlight: {},
   },
   getPosts() {
     client.getEntries({
@@ -38,9 +40,20 @@ const storage = {
       }, 3000);
     });
   },
+  getHighlights() {
+    client.getEntries({
+      limit: 6,
+      order: 'sys.createdAt',
+      content_type: 'highlights',
+    }).then(function success(highlights) {
+      if (storage.debug) console.log('getHighlights triggered');
+      storage.state.highlights = highlights;
+    });
+  },
 };
 export default {
   state: storage.state,
   getPosts() { storage.getPosts(); },
   getPost(id) { storage.getPost(id); },
+  getHighlights() { storage.getHighlights(); },
 };

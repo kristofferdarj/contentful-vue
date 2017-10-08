@@ -15,6 +15,7 @@
 
 <script>
 import { toolbar as mdcToolbar } from 'material-components-web';
+
 import vFooter from './components/v-footer';
 
 const { MDCToolbar, MDCToolbarFoundation } = mdcToolbar;
@@ -29,8 +30,8 @@ export default {
   },
 };
 </script>
-<style lang="scss" scoped>
-@import './assets/style/colors.scss';
+<style lang="scss">
+@import "@material/toolbar/mdc-toolbar";
 
 .content-container {
   display: flex;
@@ -44,7 +45,7 @@ export default {
 .mdc-toolbar {
   background-color: $color-toolbar-background;
   color: $color-light-text;
-  z-index: 2;
+  z-index: 3;
 }
 .mdc-toolbar__title {
   color: #FFF;

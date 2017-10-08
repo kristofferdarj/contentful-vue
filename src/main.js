@@ -3,12 +3,12 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 
+import baseStyle from './assets/style/base.scss';
+
 import App from './App';
 import vHome from './components/v-home';
 import vBlogRoll from './components/v-blogroll';
 import vBlogEntry from './components/v-blog-entry';
-
-import baseStyle from './assets/style/base.scss';
 
 const marked = require('marked');
 
