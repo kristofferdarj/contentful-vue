@@ -9,9 +9,9 @@
               <time v-if="shared.entry && shared.entry.sys && shared.entry.sys.createdAt" class="entry__published" datetime="">Publicerat: {{ formatDate(shared.entry.sys.createdAt) }}</time>
               <time v-if="shared.entry && shared.entry.sys && shared.entry.sys.updatedAt" class="entry__updated" datetime="">{{ formatDate(shared.entry.sys.updatedAt) }}</time>
             </div>
-            <h1 v-if="shared.entry && shared.entry.fields && shared.entry.fields.title" class="mdc-typography--headline mdc-typography--adjust-margin entry__title">{{ shared.entry.fields.title }}</h1>
+            <h1 v-if="shared.entry && shared.entry.fields && shared.entry.fields.title" class="entry__title">{{ shared.entry.fields.title }}</h1>
           </header>
-          <div v-if="shared.entry && shared.entry.fields && shared.entry.fields.body" class="entry-content" v-html="marked(shared.entry.fields.body)"></div>
+          <div v-if="shared.entry && shared.entry.fields && shared.entry.fields.body" class="entry__content" v-html="marked(shared.entry.fields.body)"></div>
           <footer class="entry__footer">
             <v-entry-author></v-entry-author>
           </footer>
@@ -69,6 +69,8 @@ export default {
   }
 }
 .entry__title {
+  @include mdc-typography(headline);
+  @include mdc-typography-adjust-margin(headline);
   color: $color-dark-text;
 }
 .entry__image {
@@ -85,10 +87,10 @@ export default {
   margin: 1.5rem 0 0 0 ;
 }
 
-.entry-content p:nth-of-type(1n)::selection {
+.entry__content p:nth-of-type(1n)::selection {
   background-color: #80CBC4;
 }
-.entry-content p:nth-of-type(2n)::selection {
+.entry__content p:nth-of-type(2n)::selection {
   background-color: #C5E1A5;
 }
 </style>

@@ -7,7 +7,8 @@
         :key="highlight.sys.id"
         :id="highlight.sys.id"
         :title="highlight.fields.title"
-        :description="(highlight.fields.shortDescription.length <= 80 ? highlight.fields.shortDescription : highlight.fields.shortDescription.substring(0,80)+'...')"
+        :description="highlight.fields.shortDescription"
+        :body="highlight.fields.body"
         :createdAt="highlight.sys.createdAt"
         :updatedAt="highlight.sys.updatedAt"
         :featuredImage="highlight.fields.featuredImage ? highlight.fields.featuredImage.fields.file.url : null"></v-highlight-item>
@@ -54,18 +55,18 @@ export default {
   grid-column-gap: 16px;
   grid-row-gap: 16px;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto auto auto;
   margin: 0 16px;
   max-width: 700px;
 
   @media(min-width: 500px) {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
   }
 
   @media(min-width: 700px) {
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto auto;
   }
 
   @media(min-width: 732px) {

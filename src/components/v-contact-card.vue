@@ -3,7 +3,7 @@
     <section class="mdc-card__primary contact-card__inner">
       <img class="contact-card__avatar" src="/static/avatar.jpg">
       <div>
-        <h2 class="mdc-typography--display1">Kristoffer Darj</h2>
+        <h2 class="contact-card__name">Kristoffer Darj</h2>
         <ul class="contact-list">
           <li><i class="contact-card__symbol fa fa-envelope-o" aria-hidden="true"></i><a class="contact-card__link" href="mailto:kristoffer.darj@gmail.com">kristoffer.darj@gmail.com</a></li>
           <li><i class="contact-card__symbol fa fa-twitter"></i><a class="contact-card__link" href="https://twitter.com/kristofferdarj">@kristofferdarj</a></li>
@@ -20,6 +20,8 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+@import "@material/typography/mixins";
+
 @keyframes slideInFromBottom {
   0% {
     transform: translateY(0);
@@ -42,6 +44,9 @@ export default {
 .contact-list {
   line-height: 1.7;
 }
+.contact-card__name {
+  @include mdc-typography(display1);
+}
 .contact-card__symbol {
   color: $color-subtle-text;
   display: inline-flex;
@@ -50,7 +55,9 @@ export default {
   width: 16px;
 }
 .contact-card__link {
+  @include mdc-typography(body1);
   display: inline-block;
+  font-size: 16px;
   position: relative;
   text-decoration: none;
 
