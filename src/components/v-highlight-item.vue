@@ -1,5 +1,5 @@
 <template>
-  <router-link :to="'highlight/' + id" class="mdc-card highlight">
+  <a href="#expandToggle" class="mdc-card highlight" @click="expandToggle">
     <img class="highlight__image" v-if="featuredImage" :src="'https:'+ featuredImage +'?w=250&h=250&fm=jpg&fl=progressive'">
     <section class="mdc-card__primary">
       <h1 class="mdc-card__title mdc-card__title--large">{{ title }}</h1>
@@ -7,12 +7,11 @@
     </section>
     <section class="filler"></section>
     <section class="mdc-card__actions highlight__actions">
-      <button @click="expandToggle"
-              class="mdc-button mdc-button--compact mdc-card__action highlight__expand fa fa-angle-down"
+      <button class="mdc-button mdc-button--compact mdc-card__action highlight__expand fa fa-angle-down"
               v-bind:class="{ 'is-expanded': expanded }"></button>
     </section>
     <section v-bind:class="{ 'is-expanded': expanded }" class="mdc-card__supporting-text highlight__additional" v-html="marked(body)"></section>
-  </router-link>
+  </a>
 </template>
 
 <script>
