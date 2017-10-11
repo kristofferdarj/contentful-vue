@@ -5,7 +5,7 @@
       <h1 class="mdc-card__title mdc-card__title--large">{{ title }}</h1>
       <h2 class="mdc-card__subtitle">{{ description }}</h2>
     </section>
-    <section class="filler"></section>
+    <section class="filler js-filler"></section>
     <section class="mdc-card__actions highlight__actions">
       <button class="mdc-button mdc-button--compact mdc-card__action highlight__expand fa fa-angle-down"
               v-bind:class="{ 'is-expanded': expanded }"></button>
@@ -32,6 +32,12 @@ export default {
     'featuredImage',
   ],
   mixins: [dateMixin],
+  mounted() {
+    // Set the filler height to a constant value
+    const filler = this.$el.querySelector('.js-filler');
+    const fillerHeight = filler.clientHeight;
+    filler.style.height = `${fillerHeight}px`;
+  },
   methods: {
     expandToggle() {
       this.expanded = !this.expanded;
@@ -53,8 +59,8 @@ export default {
   object-fit: cover;
 }
 .highlight__actions {
-  justify-content: flex-end;
   font-size: 1.5em;
+  justify-content: flex-end;
 }
 @keyframes colorchange {
   0% {
