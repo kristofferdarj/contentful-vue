@@ -3,7 +3,7 @@
     <v-hero></v-hero>
     <v-contact-card></v-contact-card>
     <section class="teaser">
-      <p>I'm a happy chap that loves everything about web and business development. I have worked at a number of places, ranging from startups to large coorporations and picked up some useful things about e-commerce, fintech, media, lean, ad agencies, consulting firms and it's customers along the way. Have a look around and drop me a&nbsp;line.</p>
+      <p>I'm a happy chap that loves everything about web, app and business development. I have worked at a number of places, ranging from startups to large coorporations and picked up some useful things about e-commerce, fintech, media, lean, ad agencies, consulting firms and it's customers along the&nbsp;way.</p>
     </section>
     <v-highlights></v-highlights>
     <v-blogroll></v-blogroll>
