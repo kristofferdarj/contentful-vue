@@ -31,7 +31,7 @@ exports.cssLoaders = function (options) {
           sourceMap: options.sourceMap,
           includePaths: [
                     '../node_modules',
-                    '../node_modules/material-components-web',
+                    '../node_modules/material-components-web/',
                     '../node_modules/material-components-web/node_modules',
                     '../node_modules/@material/*']
             .map((d) => path.join(__dirname, d))

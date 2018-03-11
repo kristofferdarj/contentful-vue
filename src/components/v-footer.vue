@@ -24,6 +24,7 @@ export default {
   display: flex;
   height: 32px;
   justify-content: center;
+  margin-bottom: 0;
   margin-top: 16px;
   padding: 16px;
 }
