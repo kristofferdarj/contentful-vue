@@ -3,7 +3,7 @@
     <v-hero></v-hero>
     <v-contact-card></v-contact-card>
     <section class="teaser">
-      <p>I'm a happy chap that loves everything about web, app and business development. I have worked at a number of places, ranging from startups to large coorporations and picked up some useful things about e-commerce, fintech, media, lean, ad agencies, consulting firms and it's customers along the&nbsp;way.</p>
+      <p>Thanks to my love for creating things I become a developer, hacking away at my own projects. It took me through university where I studied computer science, UX, business development and worked on the side. I began working at the marketing department at a startup (Klarna) with everything from backend development to recruitment campaigns. But a longing for the mountains and winter made my wife and I move 560 km NW where I began consulting for an advertising agency. After a few years I moved on to another company where I first started out as a frontend dev but then became a product owner instead. I have picked up some useful things about e-commerce, fintech, media, lean, ad agencies, consulting firms and it's customers along the&nbsp;way.</p>
     </section>
     <v-highlights></v-highlights>
     <v-blogroll></v-blogroll>

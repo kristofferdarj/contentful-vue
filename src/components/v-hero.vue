@@ -9,7 +9,7 @@
       <img class="video-container__poster" src="/static/hero_background.jpg">
     </div>
     <div class="hero_title-container">
-      <h1 class="hero_title">Hi, you found me! I'm a business and web developer from Sweden specialized at being a&nbsp;generalist.</h1>
+      <h1 class="hero_title">Hi, you found me! I love to innovate and challenge old habits through the use of&nbsp;technology.</h1>
     </div>
   </div>
 </template>
