@@ -3,10 +3,9 @@
     <v-hero></v-hero>
     <v-contact-card></v-contact-card>
     <section class="teaser">
-      <p>Thanks to this love for technology I became a developer, hacking away at my own projects. It took me through university where I studied computer science and developed an interest in UX and business development, while working odd hours as a developer. I then joined the marketing department at a startup (Klarna) where I got to do everything from backend development to recruitment. But eventually a longing for the mountains and real winter made my wife and I move 560 km NW where I began consulting for an advertising agency instead. After a few years I moved on to another company where I now work as product owner and with education of the sales force.</p>
+      <p v-html="$t('home.description')"></p>
     </section>
     <v-highlights></v-highlights>
-    <v-blogroll></v-blogroll>
   </div>
 </template>
 
@@ -14,15 +13,19 @@
 import vHero from './v-hero';
 import vContactCard from './v-contact-card';
 import vHighlights from './v-highlights';
-import vBlogRoll from './v-blogroll';
 
 export default {
   name: 'vHome',
   components: {
     'v-hero': vHero,
     'v-contact-card': vContactCard,
-    'v-blogroll': vBlogRoll,
     'v-highlights': vHighlights,
+  },
+  i18n: {
+    messages: {
+      en: { home: { description: 'The willingness to learn, create and change made it easy to choose education and a given to start working in parallel. That drive also makes me unable to sit still when things move slowly. I’ve made a thousand and one mistakes, learned and done better. Nowadays I work as a consultant helping companies to dare question and change old truths to improve their business.' } },
+      sv: { home: { description: 'Viljan att lära mig, skapa och förändra gjorde det lätt att välja utbildning och givet att börja jobba parallellt. Den drivkraften gör också att jag inte kan sitta still när det går för sakta. Jag har gjort tusen och ett misstag, lärt mig och gjort bättre. Nu jobbar jag som konsult och hjälper företag att våga ifrågasätta och förändra gamla sanningar för att utveckla verksamheten.' } },
+    },
   },
 };
 </script>

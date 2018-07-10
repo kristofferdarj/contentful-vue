@@ -1,6 +1,6 @@
 <template>
   <a href="#expandToggle" class="mdc-card highlight" @click="expandToggle">
-    <img class="highlight__image" v-if="featuredImage" :src="'https:'+ featuredImage +'?w=250&h=250&fm=jpg&fl=progressive'">
+    <img class="highlight__image" v-if="featuredImage" :src="featuredImage">
     <section class="mdc-card__primary">
       <h1 class="highlight__title">{{ title }}</h1>
       <h2 class="highlight_subtitle">{{ description }}</h2>
@@ -15,8 +15,6 @@
 </template>
 
 <script>
-import dateMixin from '../mixins/dateMixin';
-
 export default {
   name: 'vHighlightItem',
   data() {
@@ -31,7 +29,6 @@ export default {
     'body',
     'featuredImage',
   ],
-  mixins: [dateMixin],
   mounted() {
     // Set the filler height to a constant value
     const filler = this.$el.querySelector('.js-filler');

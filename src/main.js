@@ -1,18 +1,16 @@
 /* eslint-disable no-unused-vars */
 
 import Vue from 'vue';
-import VueRouter from 'vue-router';
+import VueI18n from 'vue-i18n';
 
 import baseStyle from './assets/style/base.scss';
 
 import App from './App';
 import vHome from './components/v-home';
-import vBlogRoll from './components/v-blogroll';
-import vBlogEntry from './components/v-blog-entry';
 
 const marked = require('marked');
 
-Vue.use(VueRouter);
+Vue.use(VueI18n);
 
 Vue.mixin({
   methods: {
@@ -22,24 +20,30 @@ Vue.mixin({
   },
 });
 
-const routes = [
-  { path: '/', component: vHome },
-  { path: '/blogroll', component: vBlogRoll },
-  { path: '/entry/:id', component: vBlogEntry },
-  { path: '*', redirect: '/' },
-];
-
-const router = new VueRouter({
-  routes,
-  mode: 'history',
-});
-
 Vue.config.debug = true;
+
+const messages = {
+  en: {
+    message: {
+      hello: 'Hello World',
+    },
+  },
+  sv: {
+    message: {
+      hello: 'Hej världen',
+    },
+  },
+};
+
+const i18n = new VueI18n({
+  locale: 'sv',
+  messages,
+});
 
 /* eslint-disable no-new, no-unused-vars */
 const app = new Vue({
+  i18n,
   components: { App },
-  router,
   render(h) {
     return h('app', {}, {});
   },

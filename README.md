@@ -1,6 +1,6 @@
-# contentful-portfolio
+# kristofferdarj-portfolio
 
-> A Vue.js portfolio connected to contentful
+> A Vue.js portfolio
 
 ## Build Setup
 

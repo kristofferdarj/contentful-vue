@@ -1,12 +1,22 @@
 <template>
   <div class="footer">
-    Powered by 🌈 and 🦄
+    {{ $t('footer') }}
   </div>
 </template>
 
 <script>
 export default {
   name: 'vFooter',
+  i18n: {
+    messages: {
+      en: {
+        footer: 'Powered by 🌈 and 🦄',
+      },
+      sv: {
+        footer: 'Drivs av 🌈 och 🦄',
+      },
+    },
+  },
 };
 </script>
 

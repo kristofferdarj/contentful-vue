@@ -9,7 +9,7 @@
       <img class="video-container__poster" src="/static/hero_background.jpg">
     </div>
     <div class="hero_title-container">
-      <h1 class="hero_title">Hi, you found me! I love to innovate and challenge old habits through the use of&nbsp;technology.</h1>
+      <h1 class="hero_title" v-html="$t('hero.title')"></h1>
     </div>
   </div>
 </template>
@@ -17,6 +17,12 @@
 <script>
 export default {
   name: 'vHero',
+  i18n: {
+    messages: {
+      en: { hero: { title: "Hi! I'm passionate about creating, developing and scaling different types of business ideas. Often with the help of&nbsp;technology." } },
+      sv: { hero: { title: 'Hej! Jag brinner för att skapa, utveckla och skala olika typer av affärsidéer, ofta med hjälp av&nbsp;teknik.' } },
+    },
+  },
 };
 </script>
 
@@ -41,12 +47,17 @@ export default {
   z-index: 1;
 }
 .hero_title {
-  @include mdc-typography(display2);
-  @include mdc-typography-adjust-margin(display2);
+  @include mdc-typography(display1);
+  @include mdc-typography-adjust-margin(display1);
 
   color: $color-light-text;
   max-width: 700px;
   word-wrap: break-word;
+
+  @media(min-width: 500px) {
+    @include mdc-typography(display2);
+    @include mdc-typography-adjust-margin(display2);
+  }
 }
 .video-container {
   height: 100vh;

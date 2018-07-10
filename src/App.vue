@@ -3,11 +3,14 @@
     <nav class="mdc-toolbar mdc-toolbar--fixed mdc-toolbar--waterfall" data-mdc-auto-init="MDCIconToggle">
       <div class="mdc-toolbar__row">
         <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
-          <router-link to="/" class="mdc-toolbar__title">Home</router-link>
+          <a href="#home" class="mdc-toolbar__title">{{ $t('menu.home') }}</a>
+        </section>
+        <section class="mdc-toolbar__section mdc-toolbar__section--align-end">
+          <v-locale-changer></v-locale-changer>
         </section>
       </div>
     </nav>
-    <router-view></router-view>
+    <v-home id="home"></v-home>
     <div class="filler"></div>
     <v-footer></v-footer>
   </div>
@@ -16,6 +19,8 @@
 <script>
 import { toolbar as mdcToolbar } from 'material-components-web';
 
+import vHome from './components/v-home';
+import vLocaleChanger from './components/v-locale-changer';
 import vFooter from './components/v-footer';
 
 const { MDCToolbar, MDCToolbarFoundation } = mdcToolbar;
@@ -23,7 +28,23 @@ const { MDCToolbar, MDCToolbarFoundation } = mdcToolbar;
 export default {
   name: 'app',
   components: {
+    'v-home': vHome,
     'v-footer': vFooter,
+    'v-locale-changer': vLocaleChanger,
+  },
+  i18n: {
+    messages: {
+      en: {
+        menu: {
+          home: 'Home',
+        },
+      },
+      sv: {
+        menu: {
+          home: 'Hem',
+        },
+      },
+    },
   },
   mounted() {
     MDCToolbar.attachTo(document.querySelector('.mdc-toolbar'));
