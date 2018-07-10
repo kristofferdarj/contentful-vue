@@ -35,8 +35,13 @@ const messages = {
   },
 };
 
+let initialLocale = 'sv';
+if (window.location.hash === '#en') {
+  initialLocale = 'en';
+}
+
 const i18n = new VueI18n({
-  locale: 'sv',
+  locale: initialLocale,
   messages,
 });
 
