@@ -27,11 +27,11 @@ export default {
     transform: translateY(0);
   }
   100% {
-    transform: translateY(-25%);
+    transform: translateY(-35%);
   }
 }
 .contact-card {
-  animation: slideInFromBottom 1.5s ease-out 5s 1 normal forwards;
+  animation: slideInFromBottom 1.5s ease-out 3s 1 normal forwards;
   background-color: $color-card-background;
   margin-bottom: 1rem;
   margin-top: 16px;
