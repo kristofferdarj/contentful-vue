@@ -6,6 +6,7 @@
       <p v-html="$t('home.description')"></p>
     </section>
     <v-highlights></v-highlights>
+    <v-recommendations></v-recommendations>
   </div>
 </template>
 
@@ -13,6 +14,7 @@
 import vHero from './v-hero';
 import vContactCard from './v-contact-card';
 import vHighlights from './v-highlights';
+import vRecommendations from './v-recommendations';
 
 export default {
   name: 'vHome',
@@ -20,6 +22,7 @@ export default {
     'v-hero': vHero,
     'v-contact-card': vContactCard,
     'v-highlights': vHighlights,
+    'v-recommendations': vRecommendations,
   },
   i18n: {
     messages: {
