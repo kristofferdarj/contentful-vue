@@ -19,8 +19,8 @@ export default {
   name: 'vHero',
   i18n: {
     messages: {
-      en: { hero: { title: "Hi! I'm passionate about creating, developing and scaling different types of business ideas. Often with the help of&nbsp;technology." } },
-      sv: { hero: { title: 'Hej! Jag brinner för att skapa, utveckla och skala olika typer av affärsidéer, ofta med hjälp av&nbsp;teknik.' } },
+      en: { hero: { title: "Hi! I'm creating, developing and scaling different types of business ideas. Often with the help of&nbsp;technology." } },
+      sv: { hero: { title: 'Hej! Jag skapar, utvecklar och skalar olika typer av affärsidéer, ofta med hjälp av&nbsp;teknik.' } },
     },
   },
 };
