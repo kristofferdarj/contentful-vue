@@ -26,7 +26,7 @@ export default {
     messages: {
       en: {
         recommendations: {
-          title: 'Recommendations',
+          title: 'Recommen&shy;dations',
           blocks: [
             {
               id: 1,
