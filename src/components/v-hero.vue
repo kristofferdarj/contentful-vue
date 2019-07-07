@@ -19,7 +19,7 @@ export default {
   name: 'vHero',
   i18n: {
     messages: {
-      en: { hero: { title: "Hi! I'm creating, developing and scaling different types of business ideas. Often with the help of&nbsp;technology." } },
+      en: { hero: { title: 'Hi! I create, develop and scale different types of business ideas, often using&nbsp;technology.' } },
       sv: { hero: { title: 'Hej! Jag skapar, utvecklar och skalar olika typer av affärsidéer, ofta med hjälp av&nbsp;teknik.' } },
     },
   },
