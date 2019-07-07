@@ -37,7 +37,7 @@ export default {
             },
             {
               id: 2,
-              image: '/static/highlight_klarna.jpg',
+              image: '/static/highlight_klarna.png',
               title: 'Out of the comfort zone',
               description: 'Startup mania',
               body: 'Working at a startup on steroids constantly challenged me to get out of my comfort zone. As the head of web development and the inhouse bureau (at the same time) I did everything between recruiting and diving deep into code. This period will forever shape what I view as possible and doable.',
@@ -84,7 +84,7 @@ export default {
               body: 'Jag driver mitt eget företag, skapar saker, marknadsför dem och lär av mina misstag. Det har gjort mig självgående. Jag behöver inte färdiga specar och strikt styrning för att få saker gjorda, jag löser det.',
             },
             {
-              image: '/static/highlight_klarna.jpg',
+              image: '/static/highlight_klarna.png',
               title: 'Utanför komfortzonen',
               description: 'Startup mania',
               body: 'Att jobba för en startup på steroider utmanade mig konstant att kliva ut ur komfortzonen. Som ansvarig för webbutvecklingen och inhouse-byrån (samtidigt) gjorde jag allt mellan att rekrytera och djupdyka i kod. Den här tiden kommer för alltid påverka vad jag ser som möjligt och görbart.',

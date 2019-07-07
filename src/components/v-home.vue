@@ -26,8 +26,24 @@ export default {
   },
   i18n: {
     messages: {
-      en: { home: { description: 'The willingness to learn, create and change made it easy to choose education and a given to start working in parallel. That drive also makes me unable to sit still when things move slowly. I’ve made a thousand and one mistakes, learned and done better. Nowadays I work as a consultant helping companies to dare question and change old truths to improve their business.' } },
-      sv: { home: { description: 'Viljan att lära mig, skapa och förändra gjorde det lätt att välja utbildning och givet att börja jobba parallellt. Den drivkraften gör också att jag inte kan sitta still när det går för sakta. Jag har gjort tusen och ett misstag, lärt mig och gjort bättre. Nu jobbar jag som konsult och hjälper företag att våga ifrågasätta och förändra gamla sanningar för att utveckla verksamheten.' } },
+      en: {
+        home: {
+          description:
+            'Once upon a time, there was a young man who was interested in technology and started to create websites. He wanted to get better and went to the university, where he studied programming, psychology, and technology-based business development. 📚 ' +
+            'To get closer to reality, he started his own company and helped real customers. 💻 ' +
+            'Since then, the young man has worked at a startup, a digital agency, a media house and as an IT consultant. In countless industries where companies needed assistance. As a developer, interaction designer, marketer, project manager, and seller. ☎️ ' +
+            'Today he helps companies with the complete picture. Technology, interaction, business, employee skill development, and marketing. Sometimes he is operational, sometimes strategic and sometimes a link between those who need to be connected.',
+        },
+      },
+      sv: {
+        home: {
+          description:
+            'Det var en gång en ung man som intresserade sig för teknik och började skapa hemsidor. Han ville bli bättre och sökte sig till universitetet, där han studerade programmering, psykologi och teknikbaserad affärsutveckling. 📚' +
+            'För att komma närmare verkligheten startade han eget och hjälpte riktiga kunder. 💻 ' +
+            'Därefter har den unge mannen jobbat på en startup, en byrå, ett mediehus och som it-konsult. Inom otaliga branscher där företag behövt assistans. Som utvecklare, interaktionsdesigner, marknadsförare, projektledare och säljare. ☎️ ' +
+            'Idag hjälper han företag med helheten. Teknik, interaktion, affär, kompetensutveckling och marknadsföring. Ibland är han operativ, ibland strategisk och ibland en länk mellan de som behöver kopplas ihop.',
+        },
+      },
     },
   },
 };
