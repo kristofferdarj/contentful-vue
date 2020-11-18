@@ -29,19 +29,17 @@ export default {
       en: {
         home: {
           description:
-            'Once upon a time, there was a young man who was interested in technology and started to create websites. He wanted to get better and went to the university, where he studied programming, psychology, and technology-based business development. 📚 ' +
-            'To get closer to reality, he started his own company and helped real customers. 💻 ' +
-            'Since then, the young man has worked at a startup, a digital agency, a media house and as an IT consultant. In countless industries where companies needed assistance. As a developer, interaction designer, marketer, project manager, and seller. ☎️ ' +
-            'Today he helps companies with the complete picture. Technology, interaction, business, employee skill development, and marketing. Sometimes he is operational, sometimes strategic and sometimes a link between those who need to be connected.',
+            'Welcome! My specialty is being a generalist. That means I can with a good conscience call myself a developer, UX-person, marketer, and entrepreneur. ' +
+            'Since 2006 I\'ve worked as a consultant, at a bureau, within a startup and large companies. I\'ve moved between the media industry, finance, and tech. ' +
+            'I\'ve had roles such as frontend developer, project manager, and seller. Today my primary focus is developing Currics, the educational company I co-founded.',
         },
       },
       sv: {
         home: {
           description:
-            'Det var en gång en ung man som intresserade sig för teknik och började skapa hemsidor. Han ville bli bättre och sökte sig till universitetet, där han studerade programmering, psykologi och teknikbaserad affärsutveckling. 📚' +
-            'För att komma närmare verkligheten startade han eget och hjälpte riktiga kunder. 💻 ' +
-            'Därefter har den unge mannen jobbat på en startup, en byrå, ett mediehus och som it-konsult. Inom otaliga branscher där företag behövt assistans. Som utvecklare, interaktionsdesigner, marknadsförare, projektledare och säljare. ☎️ ' +
-            'Idag hjälper han företag med helheten. Teknik, interaktion, affär, kompetensutveckling och marknadsföring. Ibland är han operativ, ibland strategisk och ibland en länk mellan de som behöver kopplas ihop.',
+            'Välkommen hit! Min specialité är att vara generalist. Det gör att jag med gott samvete kan kalla mig utvecklare, UXare, marknadsförare och entreprenör. ' +
+            'Sen 2006 har jag jobbat som konsult, på byrå, på startups och stora företag. Jag har rört mig mellan mediebranschen, finansbranschen och it-branschen. ' +
+            'Jag har haft roller som frontendutvecklare, marknadsförare, projektledare och säljare. Idag ligger fokus på att utveckla Currics, det utbildningsföretag jag startat.',
         },
       },
     },

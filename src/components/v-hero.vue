@@ -2,11 +2,11 @@
   <div class="hero">
     <div class="video-container">
       <video autoplay loop muted class="video-container__video" poster="/static/hero_background.jpg">
-          <source src="/static/hero_background.mp4" type="video/mp4">
-          <source src="/static/hero_background.webm" type="video/webm">
-          <source src="/static/hero_background.ogv" type="video/ogg">
+          <source v-bind:src="'/static/' + selectedVideo + '.mp4'" type="video/mp4">
+          <source v-bind:src="'/static/' + selectedVideo + '.webm'" type="video/webm">
+          <source v-bind:src="'/static/' + selectedVideo + '.ogv'" type="video/ogg">
       </video>
-      <img class="video-container__poster" src="/static/hero_background.jpg">
+      <img class="video-container__poster" v-bind:src="'/static/' + selectedVideo + '.jpg'">
     </div>
     <div class="hero_title-container">
       <h1 class="hero_title" v-html="$t('hero.title')"></h1>
@@ -22,6 +22,19 @@ export default {
       en: { hero: { title: 'Hi! I create, develop and scale different types of business ideas, often using&nbsp;technology.' } },
       sv: { hero: { title: 'Hej! Jag skapar, utvecklar och skalar olika typer av affärsidéer, ofta med hjälp av&nbsp;teknik.' } },
     },
+  },
+  data() {
+    return {
+      videos: [
+        'hero_background',
+        'hero_background2',
+      ],
+      selectedVideo: '',
+    };
+  },
+  created() {
+    const idx = Math.floor(Math.random() * this.videos.length);
+    this.selectedVideo = this.videos[idx];
   },
 };
 </script>

@@ -30,10 +30,10 @@ export default {
           blocks: [
             {
               id: 1,
-              image: '/static/highlight_megafone.jpg',
+              image: '/static/highlight_currics.png',
               title: 'Practice what you preach',
-              description: 'Consultant, maker of things',
-              body: "I run my own company and create stuff, market it and learn from my mistakes. It makes me a manager of one. I don't need specifications or heavy direction to get things done, I figure it out.",
+              description: 'Entrepreneur',
+              body: "I own and run two companies. My focus is Currics where I create, market, sell and learn from my mistakes. It makes me a manager of one. I don't need specifications or heavy direction to get things done, I figure it out.",
             },
             {
               id: 2,
@@ -78,10 +78,10 @@ export default {
           title: 'Utvalt',
           blocks: [
             {
-              image: '/static/highlight_megafone.jpg',
+              image: '/static/highlight_currics.png',
               title: 'Leva som man lär',
-              description: 'Konsult, skapare av saker',
-              body: 'Jag driver mitt eget företag, skapar saker, marknadsför dem och lär av mina misstag. Det har gjort mig självgående. Jag behöver inte färdiga specar och strikt styrning för att få saker gjorda, jag löser det.',
+              description: 'Entreprenör',
+              body: 'Jag äger och driver två företag. Fokus är Currics där jag skapar, marknadsför, säljer och lär av mina misstag. Det gör mig allsidig. Jag behöver inte färdiga specar och strikt styrning för att få saker gjorda, jag löser det.',
             },
             {
               image: '/static/highlight_klarna.png',
